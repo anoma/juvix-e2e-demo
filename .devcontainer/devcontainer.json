@@ -1,0 +1,37 @@
+{
+  "name": "Ubuntu",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "USERNAME": "vscode",
+      "VARIANT": "ubuntu-22.04"
+    }
+  },
+  "runArgs": [
+    "--privileged"
+  ],
+  "postCreateCommand":
+    "bash -c 'curl https://codeload.github.com/anoma/juvix/tar.gz/main | tar -xz --strip=2 juvix-main/examples/ --directory=examples/' ",
+  "settings": {
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "trailing",
+    "files.trimTrailingWhitespace": true,
+    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.confirmOnKill": "never",
+    "juvix-mode.opts": {
+      "internalBuildDir": "/workspaces/juvix-stdlib/.juvix-build"
+    },
+    "juvix-mode.bin.path": "/home/vscode/.local/bin/",
+    "juvix-mode.input.languages": [
+      "Juvix",
+      "JuvixCore"
+    ],
+    "juvix-mode.reloadReplOnSave": true,
+    "juvix-mode.typecheckOn": "none"
+  },
+  "extensions": [
+    "Heliax.juvix-mode"
+  ],
+  "remoteUser": "vscode"
+}
+
