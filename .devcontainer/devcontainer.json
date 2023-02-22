@@ -10,7 +10,7 @@
   "runArgs": [
     "--privileged"
   ],
-  "postCreateCommand": "bash -c 'curl https://codeload.github.com/anoma/juvix/tar.gz/main | tar -xz --strip=2 juvix-main/examples/ --directory=examples/' ",
+  "postCreateCommand": "bash -c 'curl https://codeload.github.com/anoma/juvix-to-geb-to-vampIR/tar.gz/main | tar -xz --strip=2 juvix-to-geb-to-vampIR-main/test/ --directory=.' ",
   "settings": {
     "editor.tabSize": 2,
     "editor.renderWhitespace": "trailing",

@@ -40,6 +40,15 @@ RUN sudo bash -c 'curl -s https://api.github.com/repos/anoma/juvix-nightly-build
       | wget --output-document juvix.tar.gz -qi - \
       && tar xfv juvix.tar.gz --directory=/home/vscode/.local/bin/'
 
+
+RUN sudo bash -c 'curl -s https://api.github.com/repos/anoma/geb/releases/latest \
+      | grep -a "browser_download_url" \
+      | cut -d : -f 2,3 \
+      | tr -d \" \
+      | wget --output-document geb.image -qi - \
+      && mv geb.image /home/vscode/.local/bin/'
+RUN sudo bash -c 'chmod u+rx /home/vscode/.local/bin/geb.image'
+
 RUN sudo bash -c 'curl -s https://api.github.com/repos/anoma/vamp-ir/releases/latest \
       | grep -a "browser_download_url" \
       | cut -d : -f 2,3 \
