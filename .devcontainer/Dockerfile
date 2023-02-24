@@ -47,7 +47,8 @@ RUN sudo bash -c 'curl -s https://api.github.com/repos/anoma/geb/releases/latest
       | tr -d \" \
       | wget --output-document geb.image -qi - \
       && mv geb.image /home/vscode/.local/bin/'
-RUN sudo bash -c 'chmod u+rx /home/vscode/.local/bin/geb.image'
+
+RUN sudo bash -c 'chmod +x /home/vscode/.local/bin/geb.image'
 
 RUN sudo bash -c 'curl -s https://api.github.com/repos/anoma/vamp-ir/releases/latest \
       | grep -a "browser_download_url" \
