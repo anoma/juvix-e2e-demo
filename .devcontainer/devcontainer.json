@@ -10,7 +10,7 @@
   "runArgs": [
     "--privileged"
   ],
-  "postCreateCommand": "bash -c 'curl https://codeload.github.com/anoma/vscode-juvix/tar.gz/main | tar -xz --strip=2 vscode-juvix/test/ --directory=.' ",
+  "postCreateCommand": "bash -c 'curl https://codeload.github.com/anoma/juvix-e2e-demo/tar.gz/main | tar -xz --strip=2 juvix-e2e-demo/test/ --directory=.' ",
   "settings": {
     "editor.tabSize": 2,
     "editor.renderWhitespace": "trailing",
@@ -18,7 +18,7 @@
     "extensions.ignoreRecommendations": true,
     "terminal.integrated.confirmOnKill": "never",
     "juvix-mode.opts": {
-      "internalBuildDir": "/workspaces/juvix-to-geb-to-vampIR/.juvix-build"
+      "internalBuildDir": "/workspaces/juvix-e2e-demo/.juvix-build"
     },
     "juvix-mode.bin.path": "/home/vscode/.local/bin/",
     "juvix-mode.input.languages": [
